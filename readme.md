@@ -38,9 +38,9 @@ Inside of the encryption route, do the following:
 
 1. Go to [CrackStation](https://crackstation.net/) and enter in the result from the previous step. Is it able to decrypt your password?
 
-1. Install [bcrypt](https://www.npmjs.com/package/bcrypt):
+1. Install [bcryptjs](https://www.npmjs.com/package/bcryptjs):
   ```
-  npm install --save bcrypt
+  npm install --save bcryptjs
   ```
 
 1. Create a `/salt` route that returns a salt to the page.
@@ -87,7 +87,7 @@ Inside of the cookies route, do the following:
   * There is not a native way to do this; how would you identify all possible cookies and remove them all?
   * Go to your `/set` route and then right back to your `/clear` route. Have the cookies cleared? What is shown on the page? Why?
 
-1. Create a '/set-secret' route that adds additional security features to the cookie being sent back. Use the method particular to signed cookies in order to pass back a result.
+1. Create a `/set-secret` route that adds additional security features to the cookie being sent back. Use the method particular to signed cookies in order to pass back a result.
   * How has the cookie changed from the `/set` route? Take a look in the web inspector to see.
 
 
