@@ -95,7 +95,7 @@ Inside of the cookies route, do the following:
 
 Inside of the sessions route, do the following:
 
-1. Open up your web inspector and navigate to the __Resources__ tab. Open up the 'Cookies' sub-menu and click on __localhost__.
+1. Open up your web inspector and navigate to the __Application__ tab. Open up the 'Cookies' sub-menu under 'Storage' and click on __localhost__.
   * Do you have any cookies set already? Make sure to clear them out now.
 
 1. Install [cookie-session](https://www.npmjs.com/package/cookie-session) and [dotenv](https://www.npmjs.com/package/dotenv):
