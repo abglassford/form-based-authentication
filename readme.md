@@ -59,7 +59,7 @@ Inside of the encryption route, do the following:
 
 Inside of the cookies route, do the following:
 
-1. Open up your web inspector and navigate to the __Resources__ tab. Open up the 'Cookies' sub-menu and click on __localhost__.
+1. Open up your web inspector and navigate to the __Application__ tab. Open up the 'Cookies' sub-menu under 'Storage' and click on __localhost__.
   * Do you have any cookies set already? Make sure to clear them out now.
 
 1. Create a `/set` route that sets a cookie name and a rating. It should then return all stored cookies as the result. For example:
@@ -67,7 +67,7 @@ Inside of the cookies route, do the following:
   router.get('/set', function(req, res, next) {
     res.cookie('chocolateChip', 8);
     var result = JSON.stringify(req.cookies);
-    
+
     res.render('index', { title: 'Cookies', result: result });
   });
   ```
