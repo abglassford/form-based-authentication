@@ -17,8 +17,20 @@
         <li><a href="/sessions">Sessions</a></li>
       </ul>
     </nav>
-
     <hr>
+    <nav>
+      <ul>
+        {%if title == 'Encryption'%}
+        <li><a href="/encryption/md5">md5</a></li>
+        <li><a href="/encryption/salt">salt</a></li>
+        <li><a href="/encryption/hash">hash</a></li>
+        <li><a href="/encryption/compare">compare</a></li>
+        <li><a href="/encryption/set">cookies</a></li>
+        <li><a href="/encryption/clear">clear</a></li>
+
+        {%endif%}
+      </ul>
+    </nav>
 
     <p>Result: <strong>{{ result || "No result key returned." }}</strong></p>
 

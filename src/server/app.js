@@ -4,9 +4,12 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+var cookieSession = require('cookie-session')
 var bodyParser = require('body-parser');
 var swig = require('swig');
+require('dotenv').config();
 
+console.log(process.env);
 
 // *** routes *** //
 var routes = require('./routes/index.js');
@@ -36,6 +39,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../client')));
+app.use(cookieSession({
+  name: 'session',
+  keys: [
+    process.env.SECRET_KEY1,
+    process.env.SECRET_KEY2,
+    process.env.SECRET_KEY3
+  ]
+}))
 
 
 // *** main routes *** //
